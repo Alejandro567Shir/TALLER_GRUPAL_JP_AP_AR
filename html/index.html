@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tareas Gaming</title>
+    
+    <link rel="stylesheet" href="/TALLER_GRUPAL_JP_AP_AR-main/css/styles.csss">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <aside class="sidebar">
+            <div>
+                <div class="logo-box">
+                    <div class="logo-icono"></div>
+                    <h2>Gaming</h2>
+                    <p>Organiza tu mundo gamer</p>
+                </div>
+
+                <nav class="menu">
+                    <a href="#" class="activo"> Mis misiones</a>
+                    <a href="#"> Todos los juegos</a>
+                    <a href="#"> Pendientes</a>
+                    <a href="#"> Completados</a>
+                    <a href="#"> Torneos</a>
+                    <a href="#"> Estadísticas</a>
+                    <a href="#"> Ajustes</a>
+                </nav>
+            </div>
+
+            <div class="frase">
+                “Cada partida es una nueva oportunidad para mejorar.”
+            </div>
+        </aside>
+
+        <main class="principal">
+
+            <section class="encabezado">
+                <div>
+                    <h1>Mis Tareas Gamer</h1>
+                    <p>Agrega, organiza y completa tus objetivos de videojuegos</p>
+                </div>
+                <div class="perfil"></div>
+            </section>
+
+            <section class="bloque">
+                <h3>Agregar nueva misión</h3>
+
+                <form class="formulario">
+                    <div class="campo">
+                        <label>Misión</label>
+                        <input type="text" placeholder="¿Qué quieres completar hoy?" />
+                    </div>
+
+                    <div class="campo">
+                        <label>Prioridad</label>
+                        <select>
+                            <option>Alta</option>
+                            <option selected>Media</option>
+                            <option>Baja</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label>Fecha</label>
+                        <input type="date" />
+                    </div>
+
+                    <button type="button" class="btn">+ Agregar misión</button>
+                </form>
+            </section>
+
+            <section class="bloque">
+                <h3>Filtrar misiones</h3>
+
+                <div class="filtros-resumen">
+
+                    <div class="filtros">
+                        <button class="filtro-btn">Todos</button>
+                        <button class="filtro-btn">Pendientes</button>
+                        <button class="filtro-btn">Completados</button>
+                    </div>
+
+                    <div class="resumen">
+                        <div class="card-resumen">
+                            <h4>Total</h4>
+                            <span>5</span>
+                        </div>
+                        <div class="card-resumen">
+                            <h4>Pendientes</h4>
+                            <span>3</span>
+                        </div>
+                        <div class="card-resumen">
+                            <h4>Completados</h4>
+                            <span>2</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="bloque">
+                <h3>Lista de misiones</h3>
+
+                <div class="lista">
+
+                    <article class="tarea">
+                        <div class="radio"></div>
+                        <div class="info-tarea">
+                            <h4>Subir de rango en Valorant</h4>
+                            <span class="etiqueta">Alta</span>
+                        </div>
+                        <div class="fecha">24/05/2026</div>
+                        <div class="acciones">
+                            <button class="accion-btn">✓</button>
+                            <button class="accion-btn">🗑</button>
+                        </div>
+                    </article>
+
+                    <article class="tarea">
+                        <div class="radio"></div>
+                        <div class="info-tarea">
+                            <h4>Completar misión en GTA V</h4>
+                            <span class="etiqueta">Media</span>
+                        </div>
+                        <div class="fecha">24/05/2026</div>
+                        <div class="acciones">
+                            <button class="accion-btn">✓</button>
+                            <button class="accion-btn">🗑</button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="footer">
+                © 2026 Mis Tareas Gamer
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
