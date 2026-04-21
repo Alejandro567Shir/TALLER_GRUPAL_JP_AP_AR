@@ -1,68 +1,211 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 30px;
-  background: #0f172a; /* fondo oscuro gaming */
-  color: #e5e7eb; /* texto claro */
-}
-
-#container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card {
-  padding: 16px;
-  border: 2px solid #7c3aed; /* morado gaming */
-  border-radius: 12px;
-  background: #111827; /* gris oscuro elegante */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* efecto hover gamer (opcional pero limpio) */
-.card:hover {
-  border-color: #22c55e;
-  transform: scale(1.02);
+body {
+  background: #f4f4f4;
+  color: #222;
 }
 
-/* ESCRITORIO */
-@media (min-width: 980px) {
-  .card {
-    width: 50%;
-    margin-bottom: 10px;
-  }
-
-  .box3 {
-    width: 100%;
-    margin: 10px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
+/* CONTENEDOR */
+.contenedor {
+  max-width: 1280px;
+  margin: 20px auto;
+  display: flex;
+  background: #fff;
+  border: 1px solid #ccc;
+  min-height: 95vh;
 }
 
-/* TABLET */
-@media (max-width: 979px) {
-  #container {
-    flex-wrap: nowrap;
-  }
-
-  .card {
-    width: 50%;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-  }
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* MÓVIL */
-@media (max-width: 480px) {
-  #container {
-    flex-wrap: wrap;
-  }
+.logo-box {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-  .card {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+.logo-icono {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #999;
+  margin: auto;
+}
+
+.logo-box h2 {
+  margin-top: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.menu a:hover {
+  background: #eee;
+}
+
+.activo {
+  background: #ddd;
+  font-weight: bold;
+}
+
+.frase {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* PRINCIPAL */
+.principal {
+  flex: 1;
+  padding: 20px;
+}
+
+/* HEADER */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.perfil {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #999;
+  border-radius: 50%;
+}
+
+/* BLOQUES */
+.bloque {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* FORM */
+.formulario {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.btn {
+  height: 40px;
+  border: 1px solid #999;
+  background: #eee;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+/* FILTROS */
+.filtros-resumen {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+}
+
+.filtro-btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* RESUMEN */
+.resumen {
+  display: flex;
+  gap: 10px;
+}
+
+.card-resumen {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* LISTA */
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tarea {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.radio {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #777;
+  border-radius: 50%;
+}
+
+.etiqueta {
+  font-size: 12px;
+  border: 1px solid #aaa;
+  padding: 2px 6px;
+}
+
+.acciones {
+  display: flex;
+  gap: 5px;
+}
+
+.accion-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #aaa;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #666;
 }
