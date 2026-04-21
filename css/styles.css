@@ -1,0 +1,68 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 30px;
+  background: #0f172a; /* fondo oscuro gaming */
+  color: #e5e7eb; /* texto claro */
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 16px;
+  border: 2px solid #7c3aed; /* morado gaming */
+  border-radius: 12px;
+  background: #111827; /* gris oscuro elegante */
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+/* efecto hover gamer (opcional pero limpio) */
+.card:hover {
+  border-color: #22c55e;
+  transform: scale(1.02);
+}
+
+/* ESCRITORIO */
+@media (min-width: 980px) {
+  .card {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+
+  .box3 {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+/* TABLET */
+@media (max-width: 979px) {
+  #container {
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    width: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* MÓVIL */
+@media (max-width: 480px) {
+  #container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
