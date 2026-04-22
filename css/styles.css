@@ -102,6 +102,7 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .campo {
@@ -124,6 +125,7 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  height: 33px;
 }
 
 .btn:hover {
@@ -133,6 +135,7 @@ body {
 .filtros-resumen {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -169,7 +172,6 @@ body {
   gap: 10px;
 }
 
-/* MISIONES AGREGADAS */
 .item-mision {
   display: flex;
   justify-content: space-between;
@@ -178,42 +180,35 @@ body {
   padding: 10px;
   border-radius: 6px;
   gap: 10px;
+  transition: 0.3s;
 }
 
-.item-mision p {
-  margin: 0;
+.item-mision.completado {
+  background: #14532d;
+}
+
+.item-mision.rehecha {
+  background: #1d4ed8;
+}
+
+.item-mision.eliminando {
+  background: #7f1d1d;
+}
+
+.info-tarea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   flex: 1;
-}
-
-.botones {
-  display: flex;
-  gap: 8px;
-}
-
-.botones button {
-  background: #020617;
-  border: none;
-  color: #fff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.botones button:hover {
-  color: #22c55e;
-}
-
-.tarea {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1e293b;
-  padding: 10px;
-  border-radius: 6px;
 }
 
 .info-tarea h4 {
   font-size: 15px;
+  margin: 0;
+}
+
+.item-mision p {
+  margin: 0;
 }
 
 .etiqueta {
@@ -222,23 +217,136 @@ body {
   color: #000;
   padding: 2px 6px;
   border-radius: 4px;
+  width: fit-content;
+}
+
+.lado-derecho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fecha-tarea {
+  font-size: 12px;
+  color: #cbd5f5;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.acciones {
+  display: flex;
+  gap: 6px;
+  align-items: center;
 }
 
 .acciones button {
-  margin-left: 5px;
-  background: #020617;
   border: none;
-  color: #fff;
+  border-radius: 5px;
   padding: 5px 8px;
   cursor: pointer;
+  color: #fff;
 }
 
-.acciones button:hover {
-  color: #22c55e;
+.btn-visto {
+  background: #22c55e;
+}
+
+.btn-rehacer {
+  background: #3b82f6;
+}
+
+.btn-eliminar {
+  background: #ef4444;
 }
 
 .footer {
   text-align: center;
   font-size: 12px;
   color: #64748b;
+}
+
+.perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil i {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+  margin-top: 6px;
+  gap: 8px;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: #94a3b8;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.submenu a:hover {
+  background: #1e293b;
+  color: #22c55e;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-desplegable summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  background: #22c55e;
+  color: #000;
+  font-weight: bold;
+}
+
+.menu-desplegable summary::-webkit-details-marker {
+  display: none;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  margin-left: 14px;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: #cbd5f5;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background: #1e293b;
+  color: #22c55e;
+}
+
+.separador {
+  border: none;
+  border-top: 1px solid #64748b;
+  width: 80%;
+  margin: 15px auto;
 }

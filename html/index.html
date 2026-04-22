@@ -24,16 +24,24 @@
                 </div>
 
                 <nav class="menu">
-                    <a href="#" class="activo"><i class="fa-solid fa-list"></i> Todas las tareas</a>
-                    <a href="#"><i class="fa-regular fa-clock"></i> Pendientes</a>
-                    <a href="#"><i class="fa-regular fa-circle-check"></i> Completados</a>
-                    <a href="#"><i class="fa-regular fa-calendar"></i> Calendario</a>
-                    <a href="#"><i class="fa-solid fa-chart-column"></i> Estadísticas</a>
-                    <a href="#"><i class="fa-solid fa-gear"></i> Ajustes</a>
+                    <details class="menu-desplegable">
+                        <summary class="activo">
+                            <i class="fa-solid fa-list"></i> Todas las tareas
+                        </summary>
+
+                        <div class="submenu">
+                            <a href="#pendientes"><i class="fa-regular fa-clock"></i> Pendientes</a>
+                            <a href="#completados"><i class="fa-regular fa-circle-check"></i> Completados</a>
+                            <a href="#calendario"><i class="fa-regular fa-calendar"></i> Calendario</a>
+                            <a href="#estadisticas"><i class="fa-solid fa-chart-column"></i> Estadísticas</a>
+                            <a href="#ajustes"><i class="fa-solid fa-gear"></i> Ajustes</a>
+                        </div>
+                    </details>
                 </nav>
             </div>
 
             <div class="frase">
+                <hr class="separador">
                 <i class="fa-solid fa-gamepad"></i> Cada partida es una nueva oportunidad para mejorar.
             </div>
         </aside>
@@ -45,7 +53,7 @@
                     <h1>Tareas Gaming</h1>
                     <p>Agrega, organiza y completa tus objetivos de videojuegos</p>
                 </div>
-                <div class="perfil"></div>
+                <div class="perfil"><i class="fa-regular fa-user" style="color: rgb(0, 0, 0);"></i></div>
             </section>
 
             <section class="bloque">
@@ -71,7 +79,8 @@
                         <input type="date" id="input-fecha" />
                     </div>
 
-                    <button type="button" id="btn-agregar" class="btn">+ Agregar misión</button>
+                    <button type="button" id="btn-agregar" class="btn"><i class="fa-solid fa-plus"></i> Agregar
+                        misión</button>
                 </form>
             </section>
 
@@ -82,8 +91,10 @@
 
                     <div class="filtros">
                         <button id="btn-todas" class="filtro-btn"><i class="fa-solid fa-list"></i> Todas</button>
-                        <button id="btn-pendientes" class="filtro-btn">Pendientes</button>
-                        <button id="btn-completados" class="filtro-btn">Completados</button>
+                        <button id="btn-pendientes" class="filtro-btn"><i class="fa-regular fa-clock"></i>
+                            Pendientes</button>
+                        <button id="btn-completados" class="filtro-btn"><i class="fa-regular fa-circle-check"></i>
+                            Completados</button>
                     </div>
 
                     <div class="resumen">
@@ -110,7 +121,7 @@
                 <div id="lista-misiones" class="lista">
                 </div>
             </section>
-
+            <hr class="separador">
             <footer class="footer">
                 © 2026 Mis Tareas Gamer
             </footer>
