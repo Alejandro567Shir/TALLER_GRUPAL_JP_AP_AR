@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tareas Gaming</title>
-    
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
@@ -54,12 +54,12 @@
                 <form class="formulario">
                     <div class="campo">
                         <label>Misión</label>
-                        <input type="text" placeholder="¿Qué quieres completar hoy?" />
+                        <input type="text" id="input-mision" placeholder="¿Qué quieres completar hoy?" />
                     </div>
 
                     <div class="campo">
                         <label>Prioridad</label>
-                        <select>
+                        <select id="input-prioridad">
                             <option>Alta</option>
                             <option selected>Media</option>
                             <option>Baja</option>
@@ -68,10 +68,10 @@
 
                     <div class="campo">
                         <label>Fecha</label>
-                        <input type="date" />
+                        <input type="date" id="input-fecha" />
                     </div>
 
-                    <button type="button" class="btn">+ Agregar misión</button>
+                    <button type="button" id="btn-agregar" class="btn">+ Agregar misión</button>
                 </form>
             </section>
 
@@ -81,23 +81,23 @@
                 <div class="filtros-resumen">
 
                     <div class="filtros">
-                        <button class="filtro-btn"><i class="fa-solid fa-list"></i> Todas</button>
-                        <button class="filtro-btn">Pendientes</button>
-                        <button class="filtro-btn">Completados</button>
+                        <button id="btn-todas" class="filtro-btn"><i class="fa-solid fa-list"></i> Todas</button>
+                        <button id="btn-pendientes" class="filtro-btn">Pendientes</button>
+                        <button id="btn-completados" class="filtro-btn">Completados</button>
                     </div>
 
                     <div class="resumen">
                         <div class="card-resumen">
                             <h4>Total</h4>
-                            <span>5</span>
+                            <span id="total-tareas">0</span>
                         </div>
                         <div class="card-resumen">
                             <h4>Pendientes</h4>
-                            <span>3</span>
+                            <span id="tareas-pendientes">0</span>
                         </div>
                         <div class="card-resumen">
                             <h4>Completados</h4>
-                            <span>2</span>
+                            <span id="tareas-completadas">0</span>
                         </div>
                     </div>
 
@@ -107,8 +107,7 @@
             <section class="bloque">
                 <h3>Lista de misiones</h3>
 
-                <div class="lista">
-
+                <div id="lista-misiones" class="lista">
                 </div>
             </section>
 
@@ -118,6 +117,7 @@
 
         </main>
     </div>
+    <script src="../js/buttons.js"></script>
 
 </body>
 

@@ -169,6 +169,40 @@ body {
   gap: 10px;
 }
 
+/* MISIONES AGREGADAS */
+.item-mision {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 10px;
+}
+
+.item-mision p {
+  margin: 0;
+  flex: 1;
+}
+
+.botones {
+  display: flex;
+  gap: 8px;
+}
+
+.botones button {
+  background: #020617;
+  border: none;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botones button:hover {
+  color: #22c55e;
+}
+
 .tarea {
   display: flex;
   justify-content: space-between;
