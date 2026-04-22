@@ -59,6 +59,9 @@ btnAgregar.addEventListener("click", () => {
   const nuevaMision = document.createElement("div");
   nuevaMision.classList.add("item-mision", "pendiente");
 
+  const circulo = document.createElement("div");
+  circulo.classList.add("estado-circulo");
+
   const infoMision = document.createElement("div");
   infoMision.classList.add("info-tarea");
 
@@ -104,6 +107,8 @@ btnAgregar.addEventListener("click", () => {
     nuevaMision.classList.add("completado");
     tituloMision.style.textDecoration = "line-through";
     tituloMision.style.opacity = "0.7";
+    circulo.style.borderColor = "#22c55e";
+    circulo.style.background = "#22c55e";
 
     const btnRehacer = crearBoton('<i class="fa-solid fa-rotate-left"></i>', "btn-rehacer");
 
@@ -112,6 +117,8 @@ btnAgregar.addEventListener("click", () => {
       nuevaMision.classList.add("pendiente", "rehecha");
       tituloMision.style.textDecoration = "none";
       tituloMision.style.opacity = "1";
+      circulo.style.borderColor = "#1e3a8a";
+      circulo.style.background = "#1e3a8a";
 
       contenedorBotones.replaceChild(btnVisto, btnRehacer);
       actualizarContadores();
@@ -124,9 +131,10 @@ btnAgregar.addEventListener("click", () => {
   });
 
   btnEliminar.addEventListener("click", () => {
-    nuevaMision.classList.remove("completado");
-    nuevaMision.classList.remove("rehecha");
+    nuevaMision.classList.remove("completado", "rehecha");
     nuevaMision.classList.add("eliminando");
+    circulo.style.borderColor = "#dc2626";
+    circulo.style.background = "#dc2626";
 
     setTimeout(() => {
       nuevaMision.remove();
@@ -144,6 +152,7 @@ btnAgregar.addEventListener("click", () => {
   ladoDerecho.appendChild(fechaMision);
   ladoDerecho.appendChild(contenedorBotones);
 
+  nuevaMision.appendChild(circulo);
   nuevaMision.appendChild(infoMision);
   nuevaMision.appendChild(ladoDerecho);
 
