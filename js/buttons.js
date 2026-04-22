@@ -12,7 +12,13 @@ const totalTareas = document.getElementById("total-tareas");
 const tareasPendientes = document.getElementById("tareas-pendientes");
 const tareasCompletadas = document.getElementById("tareas-completadas");
 
+const menuDesplegable = document.querySelector(".menu-desplegable");
+
 let filtroActual = "todas";
+
+function esTablet() {
+  return window.innerWidth >= 768 && window.innerWidth <= 1023;
+}
 
 function actualizarContadores() {
   const items = lista.children;
@@ -53,6 +59,22 @@ function crearBoton(icono, clase) {
   return boton;
 }
 
+/* MENÚ EN TABLET */
+if (menuDesplegable) {
+  document.addEventListener("click", (e) => {
+    if (esTablet() && !menuDesplegable.contains(e.target)) {
+      menuDesplegable.removeAttribute("open");
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (!esTablet()) {
+      menuDesplegable.removeAttribute("open");
+    }
+  });
+}
+
+/* AGREGAR MISIÓN */
 btnAgregar.addEventListener("click", () => {
   if (inputMision.value.trim() === "") return;
 
@@ -166,6 +188,7 @@ btnAgregar.addEventListener("click", () => {
   aplicarFiltro();
 });
 
+/* FILTROS */
 btnTodas.addEventListener("click", () => {
   filtroActual = "todas";
   aplicarFiltro();

@@ -1,135 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tareas Gaming</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tareas Gaming</title>
 
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
-
 <body>
+  <div class="contenedor">
+    <aside class="sidebar">
+      <div>
+        <div class="logo-box">
+          <div class="logo-icono"></div>
+          <h1><i class="fa-brands fa-playstation" style="color: rgb(244, 246, 244);"></i></h1>
+          <h2>Gaming</h2>
+          <p>Organiza tu mundo gamer</p>
+        </div>
 
-    <div class="contenedor">
+        <nav class="menu">
+          <details class="menu-desplegable">
+            <summary class="activo">
+              <i class="fa-solid fa-list"></i> Todas las tareas
+            </summary>
 
-        <aside class="sidebar">
-            <div>
-                <div class="logo-box">
-                    <div class="logo-icono"></div>
-                    <h1><i class="fa-brands fa-playstation" style="color: rgb(244, 246, 244);"></i></h1>
-                    <h2>Gaming</h2>
-                    <p>Organiza tu mundo gamer</p>
-                </div>
+            <div class="submenu">
+              <a href="#pendientes"><i class="fa-regular fa-clock"></i> Pendientes</a>
+              <a href="#completados"><i class="fa-regular fa-circle-check"></i> Completados</a>
+              <a href="#calendario"><i class="fa-regular fa-calendar"></i> Calendario</a>
+              <a href="#estadisticas"><i class="fa-solid fa-chart-column"></i> Estadísticas</a>
+              <a href="#ajustes"><i class="fa-solid fa-gear"></i> Ajustes</a>
+            </div>
+          </details>
+        </nav>
+      </div>
 
-                <nav class="menu">
-                    <details class="menu-desplegable">
-                        <summary class="activo">
-                            <i class="fa-solid fa-list"></i> Todas las tareas
-                        </summary>
+      <div class="frase">
+        <hr class="separador" />
+        <i class="fa-solid fa-gamepad"></i> Cada partida es una nueva oportunidad para mejorar.
+      </div>
+    </aside>
 
-                        <div class="submenu">
-                            <a href="#pendientes"><i class="fa-regular fa-clock"></i> Pendientes</a>
-                            <a href="#completados"><i class="fa-regular fa-circle-check"></i> Completados</a>
-                            <a href="#calendario"><i class="fa-regular fa-calendar"></i> Calendario</a>
-                            <a href="#estadisticas"><i class="fa-solid fa-chart-column"></i> Estadísticas</a>
-                            <a href="#ajustes"><i class="fa-solid fa-gear"></i> Ajustes</a>
-                        </div>
-                    </details>
-                </nav>
+    <main class="principal">
+      <section class="encabezado">
+        <div>
+          <h1>Tareas Gaming</h1>
+          <p>Agrega, organiza y completa tus objetivos de videojuegos</p>
+        </div>
+
+        <div class="perfil">
+          <i class="fa-regular fa-user" style="color: rgb(0, 0, 0);"></i>
+        </div>
+      </section>
+
+      <section class="bloque">
+        <h3>Agregar nueva misión</h3>
+
+        <form class="formulario">
+          <div class="campo">
+            <label>Misión</label>
+            <input type="text" id="input-mision" placeholder="¿Qué quieres completar hoy?" />
+          </div>
+
+          <div class="campo">
+            <label>Prioridad</label>
+            <select id="input-prioridad">
+              <option>Alta</option>
+              <option selected>Media</option>
+              <option>Baja</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label>Fecha</label>
+            <input type="date" id="input-fecha" />
+          </div>
+
+          <button type="button" id="btn-agregar" class="btn">
+            <i class="fa-solid fa-plus"></i> Agregar misión
+          </button>
+        </form>
+      </section>
+
+      <section class="bloque">
+        <h3>Filtrar misiones</h3>
+
+        <div class="filtros-resumen">
+          <div class="filtros">
+            <button id="btn-todas" class="filtro-btn"><i class="fa-solid fa-list"></i> Todas</button>
+            <button id="btn-pendientes" class="filtro-btn"><i class="fa-regular fa-clock"></i> Pendientes</button>
+            <button id="btn-completados" class="filtro-btn"><i class="fa-regular fa-circle-check"></i> Completados</button>
+          </div>
+
+          <div class="resumen">
+            <div class="card-resumen">
+              <h4>Total</h4>
+              <span id="total-tareas">0</span>
             </div>
 
-            <div class="frase">
-                <hr class="separador">
-                <i class="fa-solid fa-gamepad"></i> Cada partida es una nueva oportunidad para mejorar.
+            <div class="card-resumen">
+              <h4>Pendientes</h4>
+              <span id="tareas-pendientes">0</span>
             </div>
-        </aside>
 
-        <main class="principal">
+            <div class="card-resumen">
+              <h4>Completados</h4>
+              <span id="tareas-completadas">0</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section class="encabezado">
-                <div>
-                    <h1>Tareas Gaming</h1>
-                    <p>Agrega, organiza y completa tus objetivos de videojuegos</p>
-                </div>
-                <div class="perfil"><i class="fa-regular fa-user" style="color: rgb(0, 0, 0);"></i></div>
-            </section>
+      <section class="bloque">
+        <h3>Lista de misiones</h3>
+        <div id="lista-misiones" class="lista"></div>
+      </section>
 
-            <section class="bloque">
-                <h3>Agregar nueva misión</h3>
+      <hr class="separador" />
 
-                <form class="formulario">
-                    <div class="campo">
-                        <label>Misión</label>
-                        <input type="text" id="input-mision" placeholder="¿Qué quieres completar hoy?" />
-                    </div>
+      <footer class="footer">
+        © 2026 Mis Tareas Gamer
+      </footer>
+    </main>
+  </div>
 
-                    <div class="campo">
-                        <label>Prioridad</label>
-                        <select id="input-prioridad">
-                            <option>Alta</option>
-                            <option selected>Media</option>
-                            <option>Baja</option>
-                        </select>
-                    </div>
-
-                    <div class="campo">
-                        <label>Fecha</label>
-                        <input type="date" id="input-fecha" />
-                    </div>
-
-                    <button type="button" id="btn-agregar" class="btn"><i class="fa-solid fa-plus"></i> Agregar
-                        misión</button>
-                </form>
-            </section>
-
-            <section class="bloque">
-                <h3>Filtrar misiones</h3>
-
-                <div class="filtros-resumen">
-
-                    <div class="filtros">
-                        <button id="btn-todas" class="filtro-btn"><i class="fa-solid fa-list"></i> Todas</button>
-                        <button id="btn-pendientes" class="filtro-btn"><i class="fa-regular fa-clock"></i>
-                            Pendientes</button>
-                        <button id="btn-completados" class="filtro-btn"><i class="fa-regular fa-circle-check"></i>
-                            Completados</button>
-                    </div>
-
-                    <div class="resumen">
-                        <div class="card-resumen">
-                            <h4>Total</h4>
-                            <span id="total-tareas">0</span>
-                        </div>
-                        <div class="card-resumen">
-                            <h4>Pendientes</h4>
-                            <span id="tareas-pendientes">0</span>
-                        </div>
-                        <div class="card-resumen">
-                            <h4>Completados</h4>
-                            <span id="tareas-completadas">0</span>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="bloque">
-                <h3>Lista de misiones</h3>
-
-                <div id="lista-misiones" class="lista">
-                </div>
-            </section>
-            <hr class="separador">
-            <footer class="footer">
-                © 2026 Mis Tareas Gamer
-            </footer>
-
-        </main>
-    </div>
-    <script src="../js/buttons.js"></script>
-
+  <script src="../js/buttons.js"></script>
 </body>
-
 </html>

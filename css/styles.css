@@ -5,6 +5,10 @@
   font-family: Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0f172a;
   color: #e5e7eb;
@@ -28,44 +32,103 @@ body {
   justify-content: space-between;
 }
 
-.logo-box {
+.logo-box,
+.frase,
+.footer,
+.card-resumen {
   text-align: center;
+}
+
+.logo-box {
   margin-bottom: 20px;
 }
 
-.logo-box h2 {
+.logo-box h2,
+.encabezado h1 {
   color: #22c55e;
 }
 
-.menu {
+.logo-box i,
+.perfil i {
+  color: #fff;
+}
+
+.menu,
+.lista,
+.submenu,
+.info-tarea {
   display: flex;
   flex-direction: column;
+}
+
+.menu,
+.lista {
   gap: 10px;
 }
 
-.menu a {
+.submenu {
+  gap: 8px;
+  margin: 8px 0 0 14px;
+}
+
+.menu a,
+.submenu a,
+.menu-desplegable summary {
   text-decoration: none;
-  color: #cbd5f5;
-  padding: 10px;
   border-radius: 6px;
   transition: 0.2s;
 }
 
-.menu a:hover {
+.menu a,
+.menu-desplegable summary {
+  padding: 10px;
+}
+
+.submenu a {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.menu a,
+.submenu a {
+  color: #cbd5f5;
+}
+
+.menu a:hover,
+.submenu a:hover {
   background: #1e293b;
   color: #22c55e;
 }
 
-.activo {
+.activo,
+.menu-desplegable summary {
   background: #22c55e;
-  color: #000 !important;
+  color: #000;
   font-weight: bold;
+}
+
+.activo {
+  color: #000 !important;
+}
+
+.menu-desplegable summary {
+  list-style: none;
+  cursor: pointer;
 }
 
 .frase {
   font-size: 13px;
+}
+
+.frase,
+.footer {
   color: #64748b;
-  text-align: center;
+}
+
+.footer,
+.fecha-tarea,
+.etiqueta {
+  font-size: 12px;
 }
 
 .principal {
@@ -73,15 +136,27 @@ body {
   padding: 20px;
 }
 
-.encabezado {
+.encabezado,
+.filtros-resumen,
+.item-mision,
+.lado-derecho,
+.acciones,
+.perfil,
+.formulario,
+.resumen,
+.filtros {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
 }
 
-.encabezado h1 {
-  color: #22c55e;
+.encabezado,
+.filtros-resumen,
+.item-mision {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.encabezado {
+  margin-bottom: 16px;
 }
 
 .perfil {
@@ -89,6 +164,8 @@ body {
   height: 40px;
   border-radius: 50%;
   background: #22c55e;
+  justify-content: center;
+  align-items: center;
 }
 
 .bloque {
@@ -98,15 +175,30 @@ body {
   margin-bottom: 15px;
 }
 
-.formulario {
-  display: flex;
+.formulario,
+.resumen,
+.filtros {
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.formulario,
+.filtros-resumen {
   align-items: flex-end;
 }
 
-.campo {
+.filtros-resumen {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.campo,
+.info-tarea {
   flex: 1;
+}
+
+.info-tarea {
+  gap: 4px;
 }
 
 .campo input,
@@ -119,12 +211,17 @@ body {
   color: #fff;
 }
 
+.btn,
+.filtros button,
+.acciones button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .btn {
   padding: 8px 15px;
   background: #22c55e;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
   height: 33px;
 }
 
@@ -132,21 +229,10 @@ body {
   background: #16a34a;
 }
 
-.filtros-resumen {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .filtros button {
   padding: 6px 12px;
   background: #1e293b;
-  border: none;
   color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .filtros button:hover {
@@ -154,32 +240,15 @@ body {
   color: #000;
 }
 
-.resumen {
-  display: flex;
-  gap: 10px;
-}
-
-.card-resumen {
+.card-resumen,
+.item-mision {
   background: #1e293b;
   padding: 10px;
   border-radius: 6px;
-  text-align: center;
-}
-
-.lista {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .item-mision {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1e293b;
-  padding: 10px;
-  border-radius: 6px;
-  gap: 10px;
+  gap: 12px;
   transition: 0.3s;
 }
 
@@ -195,58 +264,49 @@ body {
   background: #7f1d1d;
 }
 
-.info-tarea {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
+.info-tarea h4,
+.item-mision p,
+.fecha-tarea {
+  margin: 0;
 }
 
 .info-tarea h4 {
   font-size: 15px;
-  margin: 0;
-}
-
-.item-mision p {
-  margin: 0;
 }
 
 .etiqueta {
-  font-size: 12px;
+  display: inline-block;
+  width: fit-content;
   background: #22c55e;
   color: #000;
-  padding: 2px 6px;
+  padding: 2px 8px;
   border-radius: 4px;
-  width: fit-content;
+  align-self: flex-start;
+}
+
+.lado-derecho,
+.acciones {
+  align-items: center;
 }
 
 .lado-derecho {
-  display: flex;
-  align-items: center;
   gap: 12px;
 }
 
+.acciones {
+  gap: 6px;
+}
+
 .fecha-tarea {
-  font-size: 12px;
   color: #cbd5f5;
-  margin: 0;
   white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.acciones {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-
 .acciones button {
-  border: none;
-  border-radius: 5px;
   padding: 5px 8px;
-  cursor: pointer;
   color: #fff;
 }
 
@@ -262,88 +322,6 @@ body {
   background: #ef4444;
 }
 
-.footer {
-  text-align: center;
-  font-size: 12px;
-  color: #64748b;
-}
-
-.perfil {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #22c55e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.perfil i {
-  color: #ffffff;
-  font-size: 18px;
-}
-
-.submenu {
-  display: flex;
-  flex-direction: column;
-  margin-left: 18px;
-  margin-top: 6px;
-  gap: 8px;
-}
-
-.submenu a {
-  text-decoration: none;
-  color: #94a3b8;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: 0.2s;
-}
-
-.submenu a:hover {
-  background: #1e293b;
-  color: #22c55e;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-.menu-desplegable summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 6px;
-  background: #22c55e;
-  color: #000;
-  font-weight: bold;
-}
-
-.menu-desplegable summary::-webkit-details-marker {
-  display: none;
-}
-
-.submenu {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 8px;
-  margin-left: 14px;
-}
-
-.submenu a {
-  text-decoration: none;
-  color: #cbd5f5;
-  padding: 8px 10px;
-  border-radius: 6px;
-  transition: 0.2s;
-  font-size: 14px;
-}
-
-.submenu a:hover {
-  background: #1e293b;
-  color: #22c55e;
-}
-
 .separador {
   border: none;
   border-top: 1px solid #64748b;
@@ -356,16 +334,222 @@ html {
   height: 18px;
   border: 2px solid #9ca3af;
   border-radius: 50%;
-  flex-shrink: 0;
 }
 
-.item-mision {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+@media (min-width: 1024px) {
+  .card-resumen {
+    min-width: 120px;
+  }
 }
 
-.info-tarea {
-  flex: 1;
+@media (max-width: 1023px) {
+  .logo-box,
+  .frase {
+    display: none;
+  }
+
+  .menu {
+    gap: 0;
+  }
+
+  .menu-desplegable {
+    position: relative;
+  }
+
+  .menu-desplegable summary {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    background: #22c55e;
+    color: #000;
+    border-radius: 8px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .menu-desplegable summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .menu-desplegable summary i {
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+  }
+
+  .encabezado {
+    position: relative;
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 16px;
+  }
+
+  .encabezado > div:first-child {
+    width: 100%;
+    text-align: center;
+  }
+
+  .encabezado > div:first-child p {
+    display: none;
+  }
+
+  .encabezado h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .perfil {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .filtros-resumen {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtros,
+  .resumen {
+    flex-wrap: nowrap;
+  }
+
+  .resumen {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card-resumen {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contenedor {
+    margin: 15px;
+  }
+
+  .sidebar {
+    width: auto;
+    background: transparent;
+    padding: 0;
+    position: fixed;
+    top: 32px;
+    left: 20px;
+    z-index: 1000;
+    display: block;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    background: #020617;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .submenu a {
+    background: #1e293b;
+    border-radius: 6px;
+  }
+
+  .principal {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .formulario .campo {
+    width: calc(50% - 5px);
+    flex: none;
+  }
+
+  .formulario .campo:first-child,
+  .formulario .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedor {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .sidebar {
+    width: auto;
+    background: transparent;
+    padding: 0;
+    position: fixed;
+    top: 26px;
+    left: 15px;
+    z-index: 1000;
+    display: block;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 180px;
+    margin: 0;
+    padding: 10px;
+    background: #020617;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .submenu a {
+    background: #1e293b;
+    border-radius: 6px;
+  }
+
+  .principal,
+  .campo,
+  .btn {
+    width: 100%;
+  }
+
+  .principal {
+    padding: 15px;
+  }
+
+  .formulario,
+  .filtros {
+    flex-direction: column;
+  }
+
+  .item-mision {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filtros button {
+    width: 100%;
+  }
+
+  .card-resumen {
+    padding: 8px;
+  }
+
+  .lado-derecho,
+  .acciones {
+    width: auto;
+  }
+
+  .lado-derecho {
+    margin-left: auto;
+  }
 }
