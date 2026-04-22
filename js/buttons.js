@@ -59,7 +59,6 @@ function crearBoton(icono, clase) {
   return boton;
 }
 
-/* MENÚ EN TABLET */
 if (menuDesplegable) {
   document.addEventListener("click", (e) => {
     if (esTablet() && !menuDesplegable.contains(e.target)) {
@@ -74,7 +73,6 @@ if (menuDesplegable) {
   });
 }
 
-/* AGREGAR MISIÓN */
 btnAgregar.addEventListener("click", () => {
   if (inputMision.value.trim() === "") return;
 
@@ -188,7 +186,6 @@ btnAgregar.addEventListener("click", () => {
   aplicarFiltro();
 });
 
-/* FILTROS */
 btnTodas.addEventListener("click", () => {
   filtroActual = "todas";
   aplicarFiltro();
